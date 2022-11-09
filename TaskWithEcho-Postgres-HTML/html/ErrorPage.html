@@ -1,0 +1,30 @@
+{{define "ErrorPage"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Возникла ошибка</title>
+    <style>
+        .layer {
+          background: rgb(255, 255, 255); /* Цвет фона */
+          padding: 10px; /* Поля вокруг текста */
+        }
+      </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-10 layer" >
+        <div class="container-fluid" >
+          <p class="lead">Ошибка: {{ .Error}}</p>
+          <form >
+            <button onclick="javascript:history.back(); return false;" class="small">Вернуться назад</button>
+         </form>
+        </div>
+      </main>
+</body>
+</html>
+
+{{ end }}

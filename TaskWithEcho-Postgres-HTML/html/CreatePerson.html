@@ -1,0 +1,38 @@
+{{define "CreatePerson"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Создать запись</title>
+    <style>
+        .layer {
+          background: rgb(255, 255, 255); /* Цвет фона */
+          padding: 20px; /* Поля вокруг текста */
+        }
+      </style>
+</head>
+<body class="d-flex flex-column h-100">
+  
+  {{ template "header" }}
+    
+    <!-- Begin page content -->
+    <main class="flex-shrink-10 layer" >
+        <div class="container-fluid" >
+          <h2 class="mt-5">Форма добавления нового сотрудника</h2>
+            <form action="/Form_handler_PostPerson" method="post">
+            <textarea type="text" name="email" id="email" placeholder="Заплните поле email" class="form-control"></textarea><br>
+            <textarea type="text" name="phone" id="phone" placeholder="Заплните поле phone" class="form-control"></textarea><br>
+            <textarea type="text" name="firstName" id="firstName" placeholder="Заплните поле firstName" class="form-control"></textarea><br>
+            <textarea type="text" name="lastName" id="lastName" placeholder="Заплните поле lastName" class="form-control"></textarea><br>
+            <button>Создать</button>
+            </form>
+        </div>
+      </main>
+    </body>
+</html>
+
+{{ end }}

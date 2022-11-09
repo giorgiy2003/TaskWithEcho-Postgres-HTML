@@ -1,0 +1,30 @@
+{{define "InfoPage"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Запись не найдена</title>
+    <style>
+        .layer {
+          background: rgb(255, 255, 255); /* Цвет фона */
+          padding: 20px; /* Поля вокруг текста */
+        }
+      </style>
+</head>
+<body class="d-flex flex-column h-100">
+  
+  {{ template "header" }}
+
+  <main class="flex-shrink-10 layer" >
+    <div class="container-fluid" >
+     <h1 class="mt-5 lead"> <big>{{ .Info}}</big></h1>
+    </div>
+  </main>
+</body>
+</html>
+
+{{ end }}
