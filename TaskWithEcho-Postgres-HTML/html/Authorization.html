@@ -1,0 +1,33 @@
+{{ define "Authorization" }}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <section class="container-fluid">
+      <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 col-md-4" style="margin: 50px auto;">
+          <form class="form-container" action="Form_handler_Autorization">
+          <div class="form-group">
+            <h4 class="text-center font-weight-bold">Login</h4><br>
+             <input type="email" class="form-control" id="Email" name="Email" aria-describeby="emailHelp" placeholder="Enter email"><br>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="Password1" name="Password1" placeholder="Password">
+          </div>
+          <p style="color: rgb(151, 8, 8); font-size: small;">{{ .err}}</p> <!-->Вывод ошибки-->
+          <button type="submit" class="btn-block form-control" style="background-color: #654291; color: white;">Login</button>
+          </form>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
+
+{{ end }}
