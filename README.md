@@ -8,8 +8,8 @@
 ## *Форма авторизации:*
 ![Главная форма](/TaskWithEcho-Postgres-HTML/photo/Auth.jpg)
 ### Логин и пароль для авторизации зашифрованы в MD5 и храняться локально в папке ./inernal/userLogin.txt и ./inernal/userPassword.txt соответсвенно.
-Логин - 1111@mail.ru
-Пароль - 1111
+### Логин - 1111@mail.ru
+### Пароль - 1111
 
 ## *Главная форма:*
 ![Главная форма](/TaskWithEcho-Postgres-HTML/photo/mainForm.jpg)
