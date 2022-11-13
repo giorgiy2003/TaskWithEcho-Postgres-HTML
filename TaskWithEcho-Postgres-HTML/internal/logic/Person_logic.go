@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"log"
 	Model "myapp/internal/model"
 	Repository "myapp/internal/repository"
 	"os"
@@ -114,14 +115,14 @@ func Autorization(login, password string) error {
 	login = strings.TrimSpace(login)
 	Password_file, err := os.Open("./internal/userPassword.txt")
 	if err != nil {
-		fmt.Errorf("Невозможно открыть файл userPassword: %v", err)
+		log.Printf("Невозможно открыть файл userPassword: %v \n", err)
 		return errors.New("Сайт временно недоступен")
 	}
 	defer Password_file.Close()
 
 	Login_file, err := os.Open("./internal/userLogin.txt")
 	if err != nil {
-		fmt.Errorf("Невозможно открыть файл userLogin: %v", err)
+		log.Printf("Невозможно открыть файл userLogin: %v \n", err)
 		return errors.New("Сайт временно недоступен")
 	}
 	defer Login_file.Close()
