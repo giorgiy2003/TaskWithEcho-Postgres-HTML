@@ -112,7 +112,6 @@ func dataExist(id string) error {
 //Авторизация
 func Autorization(login, password string) error {
 	login = strings.TrimSpace(login)
-	password = strings.TrimSpace(password)
 	Password_file, err := os.Open("./internal/userPassword.txt")
 	if err != nil {
 		fmt.Errorf("Невозможно открыть файл userPassword: %v", err)
